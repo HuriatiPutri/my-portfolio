@@ -15,22 +15,12 @@ export default function About() {
           Frontend Developer
         </h2>
         <div className="italic flex flex-col gap-3">
-          <p>
-          I am a <strong>Frontend Developer</strong> with experience in developing and maintaining enterprise web applications.
-          </p>
-          <p>
-          Throughout my career, I have been involved in various projects, including the development and maintenance of features for the <strong>Subsidi Tepat LPG </strong> platform, used by LPG stations across Indonesia. Additionally, I contributed to the development and upkeep of SooltanKasir, a cashier application with over <strong>100,000 downloads</strong>.
-          </p>
-          <p>
-          In each project, I am responsible for software development and maintenance, ensuring optimal performance and system scalability. I am also actively expanding my expertise in <strong>Backend Development</strong>, including <strong>Node.js, MySQL, Google Cloud Platform, Docker, and Redis</strong>, to enhance my technical skills.
-          </p>
-          <p>
-          My <strong>hort-term goal</strong> is to continuously learn new technologies and refine my ability to build efficient and scalable applications. In the <strong>long term</strong>, I aspire to lead a software development team and contribute to the creation of innovative solutions.
-          </p>
-          <p>
-            Do you want to know more about me? What are you waiting for...
-            download my CV and analyze my skills.
-          </p>
+          <p>Hello! I'm Putri Huriati, a Software Engineer specializing in frontend development with over 5 years of experience building scalable and user-friendly web and mobile apps.</p>
+          <p>My career journey includes working on national-scale projects at Telkom Indonesia, as well as freelance work delivering real solutions for clients in legal, education, retail, and travel sectors.</p>
+          <p>I believe software is not just about code — it’s about creating solutions that truly improve how people work and live.</p>
+          <p>On this site, you’ll find highlights of my work: from notary office systems, English course management tools, to real-time hotel & flight booking platforms.</p>
+          <p>I'm currently open to remote opportunities, freelance collaborations, and meaningful projects.</p>
+          <p>🚀 Let’s build something impactful together!</p>
         </div>
       </div>
       <div className="md:p-20 p-5 bg-[#f5f8fd] flex flex-col gap-3 h-full">
@@ -64,6 +54,8 @@ export default function About() {
             <span className="text-[#149ddd]">React Js</span>
             <span className="text-[#149ddd]">React Native</span>
             <span className="text-[#149ddd]">Node Js</span>
+            <span className="text-[#149ddd]">Laravel</span>
+            <span className="text-[#149ddd]">Yii2</span>
           </div>
           <h2 className="text-xl mt-10">Databases</h2>
           <div className="flex flex-wrap gap-3">

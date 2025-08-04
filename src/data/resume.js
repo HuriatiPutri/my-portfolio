@@ -13,6 +13,13 @@ export const experience = [
         date: "2020 - 2022",
         description: "Developed and maintained the Sooltan Kasir App using React Native, focusing on creating a seamless user experience and optimizing app performance. Collaborated with cross-functional teams to implement new features and resolve issues."
     },
+    {
+        id: 3,
+        title: "FREELANCE EXPERIENCE",
+        company: "DWP Software House, Padang, Indonesia",
+        date: "2019 - present",
+        description: "Worked on various freelance projects, including web and mobile applications, enhancing skills in software development and project management. Developed solutions for clients in different industries, focusing on delivering high-quality software products."
+    }
 ];
 
 export const education = [

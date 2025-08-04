@@ -15,9 +15,23 @@ export const portfolio = [
     },
     {
         id: 3,
+        title: "English Course Manager",
+        description: "Automated invoicing and billing process for English course center, replaced manual Excel-based system.",
+        image: "/elia.png",
+        link: "",
+    },
+    {
+        id: 4,
         title: "Notarius",
-        description: "Software Manajemen Pekerjaan & Keuangan Notaris/PPAT",
+        description: "Web-based system for managing legal documentation, improving workflow traceability and speed.",
         image: "/notarius.png",
         link: "https://notarius.id",
+    },
+    {
+        id: 5,
+        title: "Inventory Management System",
+        description: " Enabled multi-warehouse stock control for CVs in Padang, reduced stock error rates significantly",
+        image: "/inventory.png",
+        link: "",
     }
 ]
