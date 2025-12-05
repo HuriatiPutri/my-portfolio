@@ -42,7 +42,7 @@ export default function Contact() {
           {contactInfo.map((info) => (
             <div key={info.type} className="flex gap-2">
               {info.icon}
-              <Heading level={4} className=" mb-2">
+              <Heading level={6} className=" mb-2">
                 {info.value}
               </Heading>
             </div>

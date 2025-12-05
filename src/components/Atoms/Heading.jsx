@@ -25,9 +25,7 @@ export default function Heading({ children, level = 1, className = "" }) {
         <h5 className={`text-md md:text-xl ${className}`}>{children}</h5>
       )}
       {level === 6 && (
-        <h6 className={`text-base md:text-lg font-medium ${className}`}>
-          {children}
-        </h6>
+        <h6 className={`text-base md:text-lg ${className}`}>{children}</h6>
       )}
     </>
   );
