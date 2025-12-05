@@ -10,7 +10,7 @@ export const Experience = () => {
       id="experience"
       className="bg-[#F8F7F1] min-h-screen px-6 py-20 md:px-12 lg:px-20"
     >
-      <Heading level={1} className="text-center mb-20">
+      <Heading level={1} className="text-center mb-10">
         My Work Experience
       </Heading>
       <div className="max-w-7xl mx-auto">
