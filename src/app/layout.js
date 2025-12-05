@@ -1,10 +1,16 @@
-import { Poppins } from "next/font/google";
+import { Poppins, Italianno } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"], // Choose the required font weights
   variable: "--font-poppins", // Define a CSS variable
+});
+
+const italianno = Italianno({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-italianno",
 });
 
 export const metadata = {
@@ -16,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} antialiased`}
+        className={`${poppins.variable} ${italianno.variable} antialiased`}
       >
         {children}
       </body>

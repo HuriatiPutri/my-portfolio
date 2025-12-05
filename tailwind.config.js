@@ -12,6 +12,10 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        italianno: ["var(--font-italianno)"],
+        poppins: ["var(--font-poppins)"],
+      },
     },
   },
   plugins: [],

@@ -1,42 +1,56 @@
+"use client";
+
+import Heading from "@/components/Atoms/Heading";
+import AddressIcon from "@/components/Icons/AddressIcon";
+import EmailIcon from "@/components/Icons/EmailIcon";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 export default function Contact() {
+  const [ref, isVisible] = useScrollAnimation(0.2);
+
+  const contactInfo = [
+    {
+      type: "email",
+      value: "huriatiputri@gmail.com",
+      icon: <EmailIcon />,
+    },
+    {
+      type: "address",
+      value: "Jakarta, Indonesia",
+      icon: <AddressIcon />,
+    },
+  ];
   return (
-    <section id="contact" className="bg-white md:p-20 p-5 flex flex-col h-screen gap-3">
-      <h2 className="text-3xl font-medium text-[#173b6c]">Contact</h2>
-      <span
-        style={{
-          background: "#149ddd",
-          width: "100px",
-          height: "5px",
-          borderRadius: "5px",
-        }}
-      />
-      <span>
-      Do you want to know more about me? Or maybe you prefer to ask a personalized question? or better yet, contact my services and skills; If so, don't hesitate any longer! Fill out the form and send a message.
-      </span>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-10">
-        <div className="span-col-1 shadow-md p-6 flex flex-col gap-3">
-            <div className="flex gap-2">
-                {/* <IconMapPinFilled className="w-6 h-6 text-[#149ddd]" /> */}
-                <div className="flex flex-col gap-1">
-                <label htmlFor="name" className="text-xl font-medium">Location</label>
-                <span>Jakarta Selatan, Indonesia</span>
-                </div>
-            </div>
-            <div className="flex gap-2">
-                {/* <IconMapPinFilled className="w-6 h-6 text-[#149ddd]" /> */}
-                <div className="flex flex-col gap-1">
-                <label htmlFor="name" className="text-xl font-medium">Email</label>
-                <span>huriatiputri@gmail.com</span>
-                </div>
-            </div>
-            <div className="flex gap-2">
-                {/* <IconMapPinFilled className="w-6 h-6 text-[#149ddd]" /> */}
-                <div className="flex flex-col gap-1">
-                <label htmlFor="name" className="text-xl font-medium">Call</label>
-                <span>Call me for more information.</span>
-                </div>
-            </div>
+    <section
+      id="contact"
+      ref={ref}
+      className={`bg-[#F8F7F1] md:p-20 p-5 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
+      <div className="gap-4 flex justify-between flex-col md:flex-row">
+        <div className="max-w-[500px]">
+          <Heading level={1} className="font-semibold">
+            Always learning, always building and always open to new
+            opportunities.
+          </Heading>
         </div>
+        <div className="flex flex-col justify-center">
+          <Heading level={1} className="mb-4">
+            Information
+          </Heading>
+          {contactInfo.map((info) => (
+            <div key={info.type} className="flex gap-2">
+              {info.icon}
+              <h3 className="text-lg mb-2">{info.value}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+      <hr className="mt-10 border-t border-gray-300" />
+      <div className="flex justify-between mt-6">
+        <h1 className="text-2xl font-italianno">My Portfolio</h1>
+        <h1 className="ml-4 text-sm self-end">© 2025 Putri Huriati</h1>
       </div>
     </section>
   );
