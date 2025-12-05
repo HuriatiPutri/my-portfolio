@@ -3,6 +3,7 @@
 import { portfolio } from "@/data/portfolio";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Heading from "../Atoms/Heading";
 
 export default function Carousel({ data }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,33 +56,27 @@ export default function Carousel({ data }) {
             {data.map((item) => (
               <div
                 key={item.id}
-                className="flex-shrink-0 p-2 md:p-4 rounded-lg"
+                className="flex-shrink-0 rounded-lg"
                 style={{
                   width: `calc(${slidePercentage}% - 1rem)`,
                   backgroundColor: item.color,
                 }}
               >
+                <div className="p-2 md:p-4">
+                  <Heading level={5} className="mb-2 text-white font-medium">
+                    {item.title}
+                  </Heading>
+                  <p className="text-white text-xs mb-4 line-clamp-3">
+                    {item.description}
+                  </p>
+                </div>
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={400}
                   height={300}
-                  className="w-full h-48 object-cover rounded-md mb-4"
+                  className="w-full h-[200px] object-top mb-0 object-cover"
                 />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                    {item.description}
-                  </p>
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 hover:underline inline-flex items-center text-sm font-medium"
-                  >
-                    View Project →
-                  </a>
-                </div>
               </div>
             ))}
           </div>
