@@ -75,6 +75,7 @@ export default function Carousel({ data }) {
                   alt={item.title}
                   width={400}
                   height={300}
+                  loading="lazy"
                   className="w-full h-[200px] object-top mb-0 object-cover"
                 />
               </div>

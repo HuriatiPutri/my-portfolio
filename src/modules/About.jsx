@@ -38,6 +38,7 @@ export default function About() {
               width={tech.imageWidth || 400}
               src={tech.image}
               alt={tech.name}
+              loading="lazy"
               className={`w-[${
                 tech.imageWidth || 400
               }px] h-auto object-contain`}

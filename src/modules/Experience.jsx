@@ -28,9 +28,12 @@ export const Experience = () => {
             >
               {/* Left Column - Company Info */}
               <div className="lg:col-span-4 space-y-2">
-                <h3 className="text-xl md:text-2xl font-semibold text-[#2F3E3A]">
+                <Heading
+                  level={3}
+                  className="text-xl md:text-2xl font-semibold text-[#2F3E3A]"
+                >
                   {exp.company}
-                </h3>
+                </Heading>
                 {exp.project && (
                   <p className="text-base md:text-lg text-[#2F3E3A]">
                     {exp.project}
@@ -62,9 +65,12 @@ export const Experience = () => {
               {/* Right Column - Job Description */}
               <div className="lg:col-span-5 space-y-3">
                 {exp.position && (
-                  <h4 className="text-xl md:text-2xl font-semibold text-[#2F3E3A] mb-4">
+                  <Heading
+                    level={4}
+                    className="font-semibold text-[#2F3E3A] mb-4"
+                  >
                     {exp.position}
-                  </h4>
+                  </Heading>
                 )}
                 <div className="space-y-2 text-[#2F3E3A]">
                   {exp.description.map((desc, idx) => (

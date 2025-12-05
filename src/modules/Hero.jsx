@@ -43,11 +43,13 @@ export default function Hero() {
         }`}
       >
         <Image
-          src={"/assets/img/hero-img.png"}
+          src="/assets/img/hero-img.png"
           alt="hero-image"
           objectFit="cover"
           width={500}
           height={500}
+          priority
+          fetchPriority="high"
           className="w-full max-w-[500px] md:max-w-[400px] lg:max-w-[500px] h-auto"
         />
       </div>
@@ -58,11 +60,12 @@ export default function Hero() {
         }`}
       >
         <Image
-          src={"/assets/img/stack.png"}
+          src="/assets/img/stack.png"
           alt="hero-image"
           objectFit="cover"
           width={500}
           height={500}
+          loading="lazy"
           className="w-full max-w-[500px] lg:max-w-[500px] h-auto hidden lg:block"
         />
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
