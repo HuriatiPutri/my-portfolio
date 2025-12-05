@@ -18,7 +18,7 @@ export default function Project() {
     >
       <Heading level={1}>Built & Shipped Products</Heading>
       <Heading level={5}>
-        Projects that highlight my experience in frontend and mobile
+        Projects that highlight my experience in frontend and fullstack
         development.
       </Heading>
 
