@@ -27,6 +27,9 @@ export default function Heading({ children, level = 1, className = "" }) {
       {level === 6 && (
         <h6 className={`text-base md:text-lg ${className}`}>{children}</h6>
       )}
+      {level < 1 || level > 6 ? (
+        <span className={className}>{children}</span>
+      ) : null}
     </>
   );
 }

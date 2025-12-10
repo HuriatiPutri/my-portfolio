@@ -3,16 +3,34 @@
 import Heading from "@/components/Atoms/Heading";
 import AddressIcon from "@/components/Icons/AddressIcon";
 import EmailIcon from "@/components/Icons/EmailIcon";
+import GithubIcon from "@/components/Icons/GithubIcon";
+import LinkedInIcon from "@/components/Icons/LinkedInIcon";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { IconBrandGithub } from "@tabler/icons-react";
+import { useRouter } from "next/navigation";
 
 export default function Contact() {
   const [ref, isVisible] = useScrollAnimation(0.2);
+  const router = useRouter();
 
   const contactInfo = [
     {
       type: "email",
       value: "huriatiputri@gmail.com",
+      link: "mailto:huriatiputri@gmail.com",
       icon: <EmailIcon />,
+    },
+    {
+      type: "github",
+      value: "huriatiputri",
+      link: "https://github.com/huriatiputri",
+      icon: <GithubIcon />,
+    },
+    {
+      type: "LinkedIn",
+      value: "Putri Huriati",
+      link: "https://www.linkedin.com/in/putri-huriati-2abb2412a/",
+      icon: <LinkedInIcon />,
     },
     {
       type: "address",
@@ -40,12 +58,17 @@ export default function Contact() {
             Information
           </Heading>
           {contactInfo.map((info) => (
-            <div key={info.type} className="flex gap-2">
+            <button
+              key={info.type}
+              className="flex gap-2 items-center cursor-pointer hover:text-blue-500 mb-2 bg-transparent border-none p-0 text-left"
+              onClick={() => info.link && router.push(info.link)}
+              disabled={!info.link}
+            >
               {info.icon}
               <Heading level={6} className=" mb-2">
                 {info.value}
               </Heading>
-            </div>
+            </button>
           ))}
         </div>
       </div>

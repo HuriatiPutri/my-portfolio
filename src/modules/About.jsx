@@ -45,6 +45,22 @@ export default function About() {
             />
           </div>
         ))}
+        <Heading level={7} className="mt-4">
+          And many more technologies that I have learned and used in my
+          projects. Feel free to reach out if you want to know more!
+        </Heading>
+        <Heading level={7}>
+          You can also check my learning path on Dicoding:
+          <a
+            href="https://www.dicoding.com/users/huriatiputri/academies"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline"
+          >
+            {" "}
+            https://www.dicoding.com/users/huriatiputri/academies
+          </a>
+        </Heading>
       </div>
     </section>
   );
