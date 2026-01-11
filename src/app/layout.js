@@ -1,5 +1,6 @@
 import { Poppins, Italianno } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,12 +21,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.variable} ${italianno.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <Suspense>
+      <html lang="en">
+        <body
+          className={`${poppins.variable} ${italianno.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </Suspense>
   );
 }

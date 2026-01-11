@@ -1,10 +1,9 @@
 'use client';
 
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 
 export default function EkycComplete() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const status = searchParams.get('status');
 
@@ -45,6 +44,6 @@ export default function EkycComplete() {
   }, [status]);
 
   return (
-    <div>Loading</div>
+    <div>Loading {status}</div>
   );
 }
