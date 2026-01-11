@@ -42,7 +42,7 @@ export default function EkycComplete() {
     } else {
       console.log('❌ Not in iframe or unable to access parent');
     }
-  }, [router.query]);
+  }, [status]);
 
   return (
     <div>Loading</div>
