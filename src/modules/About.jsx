@@ -13,9 +13,8 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className={`bg-white h-min-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-6 md:p-12 lg:p-20 gap-6 transition-all duration-1000 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={`bg-white h-min-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-6 md:p-12 lg:p-20 gap-6 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
     >
       <div className="flex flex-col">
         <Heading level={1}>What do I help?</Heading>
@@ -39,9 +38,8 @@ export default function About() {
               src={tech.image}
               alt={tech.name}
               loading="lazy"
-              className={`w-[${
-                tech.imageWidth || 400
-              }px] h-auto object-contain`}
+              className={`w-[${tech.imageWidth || 400
+                }px] h-auto object-contain`}
             />
           </div>
         ))}
@@ -58,7 +56,7 @@ export default function About() {
             className="text-blue-500 underline"
           >
             {" "}
-            https://www.dicoding.com/users/huriatiputri/academies
+            Putri Huriati
           </a>
         </Heading>
       </div>
